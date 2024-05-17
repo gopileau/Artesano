@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.x'
+          node-version: '22.x'
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: ng build --prod --base-href="/Artesano/"
+        run: ng build --configuration production --base-href="/Artesano/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -34,5 +34,4 @@ jobs:
           publish_dir: ./dist
           user_name: GitHub Actions
           user_email: actions@github.com
-          publish_branch: gh-pages
-
+          publish_branch: ./docs
