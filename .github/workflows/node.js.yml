@@ -16,16 +16,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.1.0'  
+          node-version: '22.x'  
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
-        run: npm run build -- --output-path=dist/uni
+        run: npm run build -- --output-path=dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: dist
