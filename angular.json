@@ -24,7 +24,7 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "index.html",
+                "glob": "src/index.html",
                 "input": "./",
                 "output": "."
               }
