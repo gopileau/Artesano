@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "docs",
-            "index": "docs/index.html",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -24,7 +24,7 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "docs/index.html",
+                "glob": "index.html",
                 "input": "./",
                 "output": "."
               }
